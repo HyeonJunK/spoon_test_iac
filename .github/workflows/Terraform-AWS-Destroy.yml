@@ -39,9 +39,9 @@ jobs:
     - name: Terraform Format
       run: terraform fmt
 
-    - name: AWS Plan Copy
-      run: aws s3 cp s3://spoon-test-tf/terraform/spoon-test.tfstate terraform.tfstate
-      id: copy
+    #- name: AWS Plan Copy
+    #  run: aws s3 cp s3://spoon-test-tf/terraform/spoon-test.tfstate terraform.tfstate
+    #  id: copy
 
     - name: Terraform Plan
       run: terraform plan -destroy -out=spoon-destroy
