@@ -284,8 +284,8 @@ resource "aws_launch_template" "spoon_test_asg_lt" {
 resource "aws_autoscaling_group" "spoon_test_asg" {
   name = "spoon-test-asg"
   vpc_zone_identifier = [aws_subnet.spoon_test_pri_sub_2a.id, aws_subnet.spoon_test_pri_sub_2c.id]       
-  desired_capacity   = 2
-  max_size           = 2
+  desired_capacity   = 1
+  max_size           = 1
   min_size           = 1
   launch_template {
     id      = aws_launch_template.spoon_test_asg_lt.id
